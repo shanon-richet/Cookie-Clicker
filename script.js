@@ -13,7 +13,7 @@ compteurDeClick.value= click;
 click= click + 1;
 compteurDeClick.innerHTML= click;
 }
-    
+   
 cookie.addEventListener('click', cookieClicker)
 function cookieClicker() {
     score.value= myValue;
@@ -40,7 +40,14 @@ setInterval(() => {
     setTimeout(() => {
         clickAfter= click;  
     }, 999);
-    cps = clickBefore - clickAfter;
+    cps = + clickBefore - clickAfter;
     console.log('your cps:' + cps) 
+    if (cps >= 5){
+        myValue= myValue + 50;
+    }
+    if (cps >= 10){
+        myValue= myValue + 100;
+    }
     }, 1000);
+
 
