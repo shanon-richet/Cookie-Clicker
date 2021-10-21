@@ -1,3 +1,7 @@
+const compteur= document.querySelector('.compteur')
+const cookie= document.querySelector('.cookie')
+
+var myValue= 0;
 var click= 0;
 
 cookie.addEventListener('click', clickCounter)
