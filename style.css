@@ -1,0 +1,23 @@
+body{
+    background-color: gray;
+}
+section{
+    display:grid;
+    grid-template-rows: auto auto;
+}
+input{
+    background: none;
+    border: none;
+}
+.score{
+    margin-left: 50px;
+}
+.click{
+    margin-left: 10px;
+}
+.cookie{
+    width: 200px;
+    height:200px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
