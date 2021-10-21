@@ -1,6 +1,14 @@
 body{
     background-color: gray;
 }
+section{
+    display:grid;
+    grid-template-rows: auto auto;
+}
+input{
+    background: none;
+    border: none;
+}
 .cookie{
     width: 200px;
     height:200px;
