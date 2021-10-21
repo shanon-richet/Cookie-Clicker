@@ -9,6 +9,12 @@ input{
     background: none;
     border: none;
 }
+.score{
+    margin-left: 50px;
+}
+.click{
+    margin-left: 10px;
+}
 .cookie{
     width: 200px;
     height:200px;
