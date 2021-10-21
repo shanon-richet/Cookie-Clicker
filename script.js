@@ -13,8 +13,9 @@ compteurDeClick.value= click;
 click= click + 1;
 compteurDeClick.innerHTML= click;
 }
-
-cookie.onclick= () => {
+    
+cookie.addEventListener('click', cookieClicker)
+function cookieClicker() {
     score.value= myValue;
     myValue= myValue + 1;
     score.innerHTML= myValue;
@@ -26,9 +27,20 @@ cookie.onclick= () => {
         }
     }
 }
-
-setInterval(() => {
+setTimeout(() => {
    clock.value= timer;
    timer= timer + 1;
    clock.innerHTML= timer;
 }, 1000);
+
+setInterval(() => {
+    clickBefore= click;
+    let cps= 0;
+    let second= timer/ timer;
+    setTimeout(() => {
+        clickAfter= click;  
+    }, 999);
+    cps = clickBefore - clickAfter;
+    console.log('your cps:' + cps) 
+    }, 1000);
+
