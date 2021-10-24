@@ -1,19 +1,18 @@
 const score= document.querySelector('.score')
 const compteurDeClick= document.querySelector('.click')
-const cookie= document.querySelector('.cookie')
+const cookie= document.querySelector('object')
 const clock= document.querySelector('.timer')
 
 var timer= 0;
 var myValue= 0;
 var click= 0;
-
+var cookieImage= document.querySelector('object')
 cookie.addEventListener('click', clickCounter)
 function clickCounter(){
 compteurDeClick.value= click;
 click= click + 1;
 compteurDeClick.innerHTML= click;
-}
-   
+} 
 cookie.addEventListener('click', cookieClicker)
 function cookieClicker() {
     score.value= myValue;
@@ -26,8 +25,9 @@ function cookieClicker() {
             score.innerHTML= myValue;
         }
     }
+ 
 }
-setTimeout(() => {
+setInterval(() => {
    clock.value= timer;
    timer= timer + 1;
    clock.innerHTML= timer;
@@ -41,13 +41,20 @@ setInterval(() => {
         clickAfter= click;  
     }, 999);
     cps = + clickBefore - clickAfter;
-    console.log('your cps:' + cps) 
-    if (cps >= 5){
+    var clickParSeconde= document.querySelector('.cps')
+    clickParSeconde.value= 'your cps: ' + cps;
+    clickParSeconde.innerHTML= 'your cps:' + cps; 
+    if (cps == 0){
+        return;
+    }
+    if (cps >= 7){
         myValue= myValue + 50;
     }
-    if (cps >= 10){
+    if (cps >= 9){
         myValue= myValue + 100;
     }
     }, 1000);
 
 
+// Local Storage
+// JSON stringify
