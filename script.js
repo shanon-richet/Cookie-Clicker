@@ -1,12 +1,22 @@
+localStorage.setItem('score', '20')
 const score= document.querySelector('.score')
 const compteurDeClick= document.querySelector('.click')
 const cookie= document.querySelector('object')
 const clock= document.querySelector('.timer')
+const stored= localStorage.getItem('textinput')
 
 var timer= 0;
 var myValue= 0;
 var click= 0;
 var cookieImage= document.querySelector('object')
+if(score){
+    score.value= stored;
+    }
+    const saveToStorage= () => {
+        localStorage.setItem('textinput', score.value)
+    }
+    cookie.addEventListener('click', saveToStorage)
+
 cookie.addEventListener('click', clickCounter)
 function clickCounter(){
 compteurDeClick.value= click;
@@ -25,7 +35,6 @@ function cookieClicker() {
             score.innerHTML= myValue;
         }
     }
- 
 }
 setInterval(() => {
    clock.value= timer;
