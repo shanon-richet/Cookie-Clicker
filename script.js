@@ -9,7 +9,8 @@ var timer= 0;
 var myValue= 0;
 var click= 0;
 var cookieImage= document.querySelector('object')
-if(score){
+if(localStorage.getItem('textinput') !== null){
+    myValue= parseInt(localStorage.getItem('textinput'))
     score.value= stored;
     }
     const saveToStorage= () => {
