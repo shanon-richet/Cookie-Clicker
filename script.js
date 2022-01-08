@@ -1,4 +1,4 @@
-localStorage.setItem('score', '20')
+//localStorage.setItem('score', '20')
 const score= document.querySelector('.score')
 const compteurDeClick= document.querySelector('.click')
 const cookie= document.querySelector('object')
@@ -70,6 +70,3 @@ setInterval(() => {
     }
 }, 1000)
 
-
-// Local Storage
-// JSON stringify
